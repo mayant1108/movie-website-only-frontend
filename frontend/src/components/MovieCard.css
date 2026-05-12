@@ -1,0 +1,46 @@
+.movieCard{
+  width:100%;
+  text-align:left;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-radius: 16px;
+  overflow:hidden;
+  cursor:pointer;
+  padding:0;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.movieCard:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.movieCard__posterWrap{
+  aspect-ratio: 2 / 3;
+  background: color-mix(in srgb, var(--border) 30%, transparent);
+}
+
+.movieCard__poster{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.movieCard__meta{
+  padding:12px 12px 14px;
+}
+
+.movieCard__title{
+  color: var(--text-h);
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.movieCard__sub{
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
