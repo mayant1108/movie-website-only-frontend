@@ -1,0 +1,63 @@
+/* src/pages/Home.css */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(145deg, var(--bg-primary) 0%, #050505 100%);
+}
+
+.main-content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.8rem;
+  row-gap: 2.2rem;
+}
+
+@media (min-width: 640px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  color: var(--text-secondary);
+  gap: 1rem;
+}
+
+.no-results svg {
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.no-results h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.no-results p {
+  font-size: 1rem;
+}

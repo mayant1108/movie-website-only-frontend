@@ -1,0 +1,63 @@
+/* src/components/GenreBar.css */
+.genre-section {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 72px;
+  z-index: 90;
+  padding: 0.75rem 0;
+}
+
+.genre-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.genre-list::-webkit-scrollbar {
+  height: 4px;
+}
+
+.genre-chip {
+  flex-shrink: 0;
+  background: rgba(30, 30, 36, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  border: 1px solid transparent;
+  letter-spacing: 0.2px;
+}
+
+.genre-chip:hover {
+  background: #2c2c32;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.genre-chip.active {
+  background: var(--accent-red);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+@media (min-width: 768px) {
+  .genre-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+  }
+  .genre-chip {
+    padding: 0.55rem 1.4rem;
+    font-size: 0.9rem;
+  }
+}

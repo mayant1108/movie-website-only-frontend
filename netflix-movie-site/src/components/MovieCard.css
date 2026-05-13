@@ -1,0 +1,41 @@
+/* Update src/components/MovieCard.css - add play button styles */
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(229, 9, 20, 0.9);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.movie-card:hover .play-button-overlay {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.play-button-overlay:hover {
+  background: #f40612;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.movie-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-title-link:hover .movie-title {
+  color: var(--accent-red);
+}

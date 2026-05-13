@@ -1,0 +1,119 @@
+/* src/components/TopBar.css */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 12, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.8rem 0;
+}
+
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  font-size: 1.9rem;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #fff 30%, #e50914 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #e50914, #b20710);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  transition: var(--transition-smooth);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1rem;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.7rem 2rem 0.7rem 2.5rem;
+  background-color: rgba(32, 32, 36, 0.8);
+  border: 1px solid var(--border-light);
+  border-radius: 40px;
+  color: white;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(4px);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-red);
+  background-color: #1c1c20;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  background: #3a3a44;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  transition: var(--transition-smooth);
+}
+
+.clear-search:hover {
+  background: var(--accent-red);
+  transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+  .topbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-wrapper {
+    width: 100%;
+  }
+  .logo {
+    justify-content: center;
+  }
+}
